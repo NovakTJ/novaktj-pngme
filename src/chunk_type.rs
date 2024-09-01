@@ -18,17 +18,17 @@ impl std::str::FromStr for ChunkType{
         if  s.len() != 4 {
             return Err(ChunkTypeError);
         }
-        let mut x : i8;
-        let mut xu8 : u8;
+        let mut x : u8;
+        // let mut xu8 : u8;
         let mut bytevec : Vec<u8> = vec!(); 
         let schars = s.chars();
         for ch in schars{
-            x = ch as i8;
+            x = ch as u8;
             if x<65 || x>122 || (x>90 && x<97) {
                 return Err(ChunkTypeError);
             }
-            xu8 = x as u8;
-            bytevec.push(xu8);
+            //xu8 = x as u8;
+            bytevec.push(x);
         }
         Ok(ChunkType { a: bytevec[0], b: bytevec[1], c: bytevec[2], d: bytevec[3] })
     }

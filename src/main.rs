@@ -11,7 +11,8 @@ mod png;
 pub type Error = Box<dyn std::error::Error>;
 pub type Result<T> = std::result::Result<T, Error>;
 
-fn main() {
+fn main() -> Result<()>{
     println!("hello");
     let c : chunk_type::ChunkType = ChunkType::from_str("abcd").expect("bice ok rln");
+    Ok(())
 }
