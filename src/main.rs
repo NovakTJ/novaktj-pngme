@@ -1,14 +1,17 @@
-use actix_files as fs;
-use actix_web::{App, HttpServer};
+use std::str::FromStr;
 
-#[actix_web::main]
-async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
-        App::new()
-        .service(fs::Files::new("/static", "./static/").show_files_listing())
-        .service(fs::Files::new("/", "./templates/").index_file("index.html"))
-    })
-    .bind(("127.0.0.1", 8888))?
-    .run()
-    .await
+use chunk_type::ChunkType;
+
+mod args;
+mod chunk;
+mod chunk_type;
+mod commands;
+mod png;
+
+pub type Error = Box<dyn std::error::Error>;
+pub type Result<T> = std::result::Result<T, Error>;
+
+fn main() {
+    println!("hello");
+    let c : chunk_type::ChunkType = ChunkType::from_str("abcd").expect("bice ok rln");
 }
