@@ -1,13 +1,3 @@
-# GitHub Codespaces ♥️ Rust
+# My solution for [PNGME](https://jrdngr.github.io/pngme_book/)
 
-Welcome to your shiny new Codespace running Rust toolchain! We've got everything fired up and running for you to explore Rust.
-
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
-
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
-
-To run this application:
-
-```
-cargo run
-```
+The problem statement and the unit tests are available at https://jrdngr.github.io/pngme_book/  but everything else is 100% my own work. I-m doing the project to learn Rust better.
